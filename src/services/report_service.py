@@ -5,7 +5,7 @@ from src.utils.logger import log
 
 class ReportService:
     def fetch_report(self) -> dict:
-        headers = {"X-API-Key": settings.API_KEY}
+        headers = {settings.API_KEY_NAME: settings.API_KEY}
 
         log.info("Запрос отчёта из API...")
         response = requests.get(settings.REPORT_URL, headers=headers, timeout=30)

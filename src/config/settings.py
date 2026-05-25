@@ -6,6 +6,7 @@ load_dotenv()
 class Settings:
     # API
     API_KEY = os.getenv("API_KEY")
+    API_KEY_NAME = os.getenv("API_KEY_NAME")
     REPORT_URL = os.getenv("REPORT_URL")
     HEALTH_URL = os.getenv("HEALTH_URL")
 
