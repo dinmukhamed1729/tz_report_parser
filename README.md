@@ -19,3 +19,25 @@
 ![Алгоритм работы](mermaid-diagram.svg)
 
 ## Как запустить 
+### 1. Клонировать репозиторий
+
+```Bash
+git clone https://github.com/dinmukhamed1729/tz_report_parser.git
+cd tz_report_parser
+```
+
+### 2. Установить зависимости
+```Bash
+pip install -r requirements.txt
+```
+
+### 3. Настроить переменные окружения
+
+```Bash
+cp .env.example .env
+```
+
+### 4. Запустить скрипт
+```bash
+python main.py
+```

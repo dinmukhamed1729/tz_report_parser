@@ -15,7 +15,7 @@ class TelegramService:
                 log.error(f"Не удалось отправить уведомление в чат {chat_id}: {e}")
 
     async def notify_start(self):
-        await self._send_to_all("🚀 Скрипт запущен — получение отчёта...")
+        await self._send_to_all("Скрипт запущен — получение отчёта...")
 
     async def notify_success(self, count: int, file_path: str):
         await self._send_to_all(

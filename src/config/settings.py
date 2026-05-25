@@ -6,14 +6,14 @@ load_dotenv()
 class Settings:
     # API
     API_KEY = os.getenv("API_KEY")
-    REPORT_URL = "https://middleware-01.fromtech.kz/test_report_dev/test_report"
-    HEALTH_URL = "https://middleware-01.fromtech.kz/test_report_dev/health"
+    REPORT_URL = os.getenv("REPORT_URL")
+    HEALTH_URL = os.getenv("HEALTH_URL")
 
     # Telegram
     TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
     TELEGRAM_CHAT_IDS = [
         int(x.strip())
-        for x in os.getenv("TELEGRAM_CHAT_IDS", "1459561428").split(",")
+        for x in os.getenv("TELEGRAM_CHAT_IDS").split(",")
         if x.strip()
     ]
 
@@ -22,7 +22,7 @@ class Settings:
     EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
     EMAIL_RECIPIENTS = [
         email.strip()
-        for email in os.getenv("EMAIL_RECIPIENTS", "ykuzmin@fromtech.ru").split(",")
+        for email in os.getenv("EMAIL_RECIPIENTS").split(",")
         if email.strip()
     ]
 
